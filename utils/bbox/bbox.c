@@ -751,8 +751,8 @@ typedef npy_longdouble __pyx_t_5numpy_longdouble_t;
 
 /* "bbox.pyx":13
  * 
- * DTYPE = np.float
- * ctypedef np.float_t DTYPE_t             # <<<<<<<<<<<<<<
+ * DTYPE = float
+ * ctypedef float_t DTYPE_t             # <<<<<<<<<<<<<<
  * 
  * def bbox_overlaps(
  */
@@ -1319,7 +1319,7 @@ static PyObject *__pyx_codeobj__8;
 static PyObject *__pyx_codeobj__10;
 
 /* "bbox.pyx":15
- * ctypedef np.float_t DTYPE_t
+ * ctypedef float_t DTYPE_t
  * 
  * def bbox_overlaps(             # <<<<<<<<<<<<<<
  *         np.ndarray[DTYPE_t, ndim=2] boxes,
@@ -1973,7 +1973,7 @@ static PyObject *__pyx_pf_4bbox_bbox_overlaps(CYTHON_UNUSED PyObject *__pyx_self
   goto __pyx_L0;
 
   /* "bbox.pyx":15
- * ctypedef np.float_t DTYPE_t
+ * ctypedef float_t DTYPE_t
  * 
  * def bbox_overlaps(             # <<<<<<<<<<<<<<
  *         np.ndarray[DTYPE_t, ndim=2] boxes,
@@ -4874,7 +4874,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__6);
 
   /* "bbox.pyx":15
- * ctypedef np.float_t DTYPE_t
+ * ctypedef float_t DTYPE_t
  * 
  * def bbox_overlaps(             # <<<<<<<<<<<<<<
  *         np.ndarray[DTYPE_t, ndim=2] boxes,
@@ -5030,8 +5030,8 @@ PyMODINIT_FUNC PyInit_bbox(void)
   /* "bbox.pyx":12
  * cimport numpy as np
  * 
- * DTYPE = np.float             # <<<<<<<<<<<<<<
- * ctypedef np.float_t DTYPE_t
+ * DTYPE = float             # <<<<<<<<<<<<<<
+ * ctypedef float_t DTYPE_t
  * 
  */
   __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 12, __pyx_L1_error)
@@ -5043,7 +5043,7 @@ PyMODINIT_FUNC PyInit_bbox(void)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
   /* "bbox.pyx":15
- * ctypedef np.float_t DTYPE_t
+ * ctypedef float_t DTYPE_t
  * 
  * def bbox_overlaps(             # <<<<<<<<<<<<<<
  *         np.ndarray[DTYPE_t, ndim=2] boxes,

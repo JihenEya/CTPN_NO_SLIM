@@ -119,15 +119,15 @@ def anchor_target_layer(rpn_cls_score, gt_boxes, im_info, _feat_stride=[16, ], a
     # --------------------------------------------------------------
     # label: 1 is positive, 0 is negative, -1 is dont care
     # (A)
-    labels = np.empty((len(inds_inside),), dtype=np.float32)
+    labels = np.empty((len(inds_inside),), dtype=float32)
     labels.fill(-1)  # 初始化label，均为-1
 
     # overlaps between the anchors and the gt boxes
     # overlaps (ex, gt), shape is A x G
     # 计算anchor和gt-box的overlap，用来给anchor上标签
     overlaps = bbox_overlaps(
-        np.ascontiguousarray(anchors, dtype=np.float),
-        np.ascontiguousarray(gt_boxes, dtype=np.float))  # 假设anchors有x个，gt_boxes有y个，返回的是一个（x,y）的数组
+        np.ascontiguousarray(anchors, dtype=float),
+        np.ascontiguousarray(gt_boxes, dtype=float))  # 假设anchors有x个，gt_boxes有y个，返回的是一个（x,y）的数组
     # 存放每一个anchor和每一个gtbox之间的overlap
     argmax_overlaps = overlaps.argmax(axis=1)  # (A)#找到和每一个gtbox，overlap最大的那个anchor
     max_overlaps = overlaps[np.arange(len(inds_inside)), argmax_overlaps]
@@ -174,13 +174,13 @@ def anchor_target_layer(rpn_cls_score, gt_boxes, im_info, _feat_stride=[16, ], a
 
     # 至此， 上好标签，开始计算rpn-box的真值
     # --------------------------------------------------------------
-    bbox_targets = np.zeros((len(inds_inside), 4), dtype=np.float32)
+    bbox_targets = np.zeros((len(inds_inside), 4), dtype=float32)
     bbox_targets = _compute_targets(anchors, gt_boxes[argmax_overlaps, :])  # 根据anchor和gtbox计算得真值（anchor和gtbox之间的偏差）
 
-    bbox_inside_weights = np.zeros((len(inds_inside), 4), dtype=np.float32)
+    bbox_inside_weights = np.zeros((len(inds_inside), 4), dtype=float32)
     bbox_inside_weights[labels == 1, :] = np.array(cfg.RPN_BBOX_INSIDE_WEIGHTS)  # 内部权重，前景就给1，其他是0
 
-    bbox_outside_weights = np.zeros((len(inds_inside), 4), dtype=np.float32)
+    bbox_outside_weights = np.zeros((len(inds_inside), 4), dtype=float32)
     if cfg.RPN_POSITIVE_WEIGHT < 0:  # 暂时使用uniform 权重，也就是正样本是1，负样本是0
         # uniform weighting of examples (given non-uniform sampling)
         num_examples = np.sum(labels >= 0) + 1
@@ -255,11 +255,11 @@ def _unmap(data, count, inds, fill=0):
     """ Unmap a subset of item (data) back to the original set of items (of
     size count) """
     if len(data.shape) == 1:
-        ret = np.empty((count,), dtype=np.float32)
+        ret = np.empty((count,), dtype=float32)
         ret.fill(fill)
         ret[inds] = data
     else:
-        ret = np.empty((count,) + data.shape[1:], dtype=np.float32)
+        ret = np.empty((count,) + data.shape[1:], dtype=float32)
         ret.fill(fill)
         ret[inds, :] = data
     return ret
@@ -272,4 +272,4 @@ def _compute_targets(ex_rois, gt_rois):
     assert ex_rois.shape[1] == 4
     assert gt_rois.shape[1] == 5
 
-    return bbox_transform(ex_rois, gt_rois[:, :4]).astype(np.float32, copy=False)
+    return bbox_transform(ex_rois, gt_rois[:, :4]).astype(float32, copy=False)

@@ -23,7 +23,7 @@ class TextProposalConnector:
     def get_text_lines(self, text_proposals, scores, im_size):
         # tp=text proposal
         tp_groups = self.group_text_proposals(text_proposals, scores, im_size)
-        text_lines = np.zeros((len(tp_groups), 5), np.float32)
+        text_lines = np.zeros((len(tp_groups), 5), float32)
 
         for index, tp_indices in enumerate(tp_groups):
             text_line_boxes = text_proposals[list(tp_indices)]
@@ -48,7 +48,7 @@ class TextProposalConnector:
 
         text_lines = clip_boxes(text_lines, im_size)
 
-        text_recs = np.zeros((len(text_lines), 9), np.float)
+        text_recs = np.zeros((len(text_lines), 9), float)
         index = 0
         for line in text_lines:
             xmin, ymin, xmax, ymax = line[0], line[1], line[2], line[3]

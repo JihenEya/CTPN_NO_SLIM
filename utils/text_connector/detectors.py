@@ -16,27 +16,27 @@ class TextDetector:
             self.text_proposal_connector = TextProposalConnectorOriented()
 
     def detect(self, text_proposals, scores, size):
-        # 删除得分较低的proposal
+        #
         keep_inds = np.where(scores > TextLineCfg.TEXT_PROPOSALS_MIN_SCORE)[0]
         text_proposals, scores = text_proposals[keep_inds], scores[keep_inds]
 
-        # 按得分排序
+        #
         sorted_indices = np.argsort(scores.ravel())[::-1]
         text_proposals, scores = text_proposals[sorted_indices], scores[sorted_indices]
 
-        # 对proposal做nms
+        # 
         keep_inds = nms(np.hstack((text_proposals, scores)), TextLineCfg.TEXT_PROPOSALS_NMS_THRESH)
         text_proposals, scores = text_proposals[keep_inds], scores[keep_inds]
 
-        # 获取检测结果
+        # 
         text_recs = self.text_proposal_connector.get_text_lines(text_proposals, scores, size)
         keep_inds = self.filter_boxes(text_recs)
         return text_recs[keep_inds]
 
     def filter_boxes(self, boxes):
-        heights = np.zeros((len(boxes), 1), np.float)
-        widths = np.zeros((len(boxes), 1), np.float)
-        scores = np.zeros((len(boxes), 1), np.float)
+        heights = np.zeros((len(boxes), 1), float)
+        widths = np.zeros((len(boxes), 1), float)
+        scores = np.zeros((len(boxes), 1), float)
         index = 0
         for box in boxes:
             heights[index] = (abs(box[5] - box[1]) + abs(box[7] - box[3])) / 2.0 + 1

@@ -32,7 +32,7 @@ class TextProposalConnector:
         # tp=text proposal
         tp_groups = self.group_text_proposals(text_proposals, scores, im_size)  # 首先还是建图，获取到文本行由哪几个小框构成
 
-        text_lines = np.zeros((len(tp_groups), 8), np.float32)
+        text_lines = np.zeros((len(tp_groups), 8), float32)
 
         for index, tp_indices in enumerate(tp_groups):
             text_line_boxes = text_proposals[list(tp_indices)]  # 每个文本行的全部小框
@@ -63,7 +63,7 @@ class TextProposalConnector:
             height = np.mean((text_line_boxes[:, 3] - text_line_boxes[:, 1]))  # 小框平均高度
             text_lines[index, 7] = height + 2.5
 
-        text_recs = np.zeros((len(text_lines), 9), np.float)
+        text_recs = np.zeros((len(text_lines), 9), float)
         index = 0
         for line in text_lines:
             b1 = line[6] - line[7] / 2  # 根据高度和文本行中心线，求取文本行上下两条线的b值

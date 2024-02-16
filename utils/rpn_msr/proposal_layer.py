@@ -143,7 +143,7 @@ def proposal_layer(rpn_cls_prob_reshape, rpn_bbox_pred, im_info, _feat_stride=[1
     # Output rois blob
     # Our RPN implementation only supports a single input image, so all
     # batch inds are 0
-    blob = np.hstack((scores.astype(np.float32, copy=False), proposals.astype(np.float32, copy=False)))
+    blob = np.hstack((scores.astype(float32, copy=False), proposals.astype(float32, copy=False)))
 
     return blob, bbox_deltas
 

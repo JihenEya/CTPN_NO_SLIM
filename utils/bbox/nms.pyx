@@ -8,20 +8,20 @@
 import numpy as np
 cimport numpy as np
 
-cdef inline np.float32_t max(np.float32_t a, np.float32_t b):
+cdef inline float32_t max(float32_t a, float32_t b):
     return a if a >= b else b
 
-cdef inline np.float32_t min(np.float32_t a, np.float32_t b):
+cdef inline float32_t min(float32_t a, float32_t b):
     return a if a <= b else b
 
-def nms(np.ndarray[np.float32_t, ndim=2] dets, np.float thresh):
-    cdef np.ndarray[np.float32_t, ndim=1] x1 = dets[:, 0]
-    cdef np.ndarray[np.float32_t, ndim=1] y1 = dets[:, 1]
-    cdef np.ndarray[np.float32_t, ndim=1] x2 = dets[:, 2]
-    cdef np.ndarray[np.float32_t, ndim=1] y2 = dets[:, 3]
-    cdef np.ndarray[np.float32_t, ndim=1] scores = dets[:, 4]
+def nms(np.ndarray[float32_t, ndim=2] dets, float thresh):
+    cdef np.ndarray[float32_t, ndim=1] x1 = dets[:, 0]
+    cdef np.ndarray[float32_t, ndim=1] y1 = dets[:, 1]
+    cdef np.ndarray[float32_t, ndim=1] x2 = dets[:, 2]
+    cdef np.ndarray[float32_t, ndim=1] y2 = dets[:, 3]
+    cdef np.ndarray[float32_t, ndim=1] scores = dets[:, 4]
 
-    cdef np.ndarray[np.float32_t, ndim=1] areas = (x2 - x1 + 1) * (y2 - y1 + 1)
+    cdef np.ndarray[float32_t, ndim=1] areas = (x2 - x1 + 1) * (y2 - y1 + 1)
     cdef np.ndarray[np.int_t, ndim=1] order = scores.argsort()[::-1]
 
     cdef int ndets = dets.shape[0]
@@ -33,11 +33,11 @@ def nms(np.ndarray[np.float32_t, ndim=2] dets, np.float thresh):
     # sorted indices
     cdef int i, j
     # temp variables for box i's (the box currently under consideration)
-    cdef np.float32_t ix1, iy1, ix2, iy2, iarea
+    cdef float32_t ix1, iy1, ix2, iy2, iarea
     # variables for computing overlap with box j (lower scoring box)
-    cdef np.float32_t xx1, yy1, xx2, yy2
-    cdef np.float32_t w, h
-    cdef np.float32_t inter, ovr
+    cdef float32_t xx1, yy1, xx2, yy2
+    cdef float32_t w, h
+    cdef float32_t inter, ovr
 
     keep = []
     for _i in range(ndets):
@@ -67,14 +67,14 @@ def nms(np.ndarray[np.float32_t, ndim=2] dets, np.float thresh):
 
     return keep
 
-def nms_new(np.ndarray[np.float32_t, ndim=2] dets, np.float thresh):
-    cdef np.ndarray[np.float32_t, ndim=1] x1 = dets[:, 0]
-    cdef np.ndarray[np.float32_t, ndim=1] y1 = dets[:, 1]
-    cdef np.ndarray[np.float32_t, ndim=1] x2 = dets[:, 2]
-    cdef np.ndarray[np.float32_t, ndim=1] y2 = dets[:, 3]
-    cdef np.ndarray[np.float32_t, ndim=1] scores = dets[:, 4]
+def nms_new(np.ndarray[float32_t, ndim=2] dets, float thresh):
+    cdef np.ndarray[float32_t, ndim=1] x1 = dets[:, 0]
+    cdef np.ndarray[float32_t, ndim=1] y1 = dets[:, 1]
+    cdef np.ndarray[float32_t, ndim=1] x2 = dets[:, 2]
+    cdef np.ndarray[float32_t, ndim=1] y2 = dets[:, 3]
+    cdef np.ndarray[float32_t, ndim=1] scores = dets[:, 4]
 
-    cdef np.ndarray[np.float32_t, ndim=1] areas = (x2 - x1 + 1) * (y2 - y1 + 1)
+    cdef np.ndarray[float32_t, ndim=1] areas = (x2 - x1 + 1) * (y2 - y1 + 1)
     cdef np.ndarray[np.int_t, ndim=1] order = scores.argsort()[::-1]
 
     cdef int ndets = dets.shape[0]
@@ -86,11 +86,11 @@ def nms_new(np.ndarray[np.float32_t, ndim=2] dets, np.float thresh):
     # sorted indices
     cdef int i, j
     # temp variables for box i's (the box currently under consideration)
-    cdef np.float32_t ix1, iy1, ix2, iy2, iarea
+    cdef float32_t ix1, iy1, ix2, iy2, iarea
     # variables for computing overlap with box j (lower scoring box)
-    cdef np.float32_t xx1, yy1, xx2, yy2
-    cdef np.float32_t w, h
-    cdef np.float32_t inter, ovr
+    cdef float32_t xx1, yy1, xx2, yy2
+    cdef float32_t w, h
+    cdef float32_t inter, ovr
 
     keep = []
     for _i in range(ndets):

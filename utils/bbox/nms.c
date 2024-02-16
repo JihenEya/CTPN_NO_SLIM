@@ -1412,7 +1412,7 @@ static PyObject *__pyx_codeobj__32;
 /* "nms.pyx":11
  * cimport numpy as np
  * 
- * cdef inline np.float32_t max(np.float32_t a, np.float32_t b):             # <<<<<<<<<<<<<<
+ * cdef inline float32_t max(float32_t a, float32_t b):             # <<<<<<<<<<<<<<
  *     return a if a >= b else b
  * 
  */
@@ -1425,10 +1425,10 @@ static CYTHON_INLINE __pyx_t_5numpy_float32_t __pyx_f_3nms_max(__pyx_t_5numpy_fl
 
   /* "nms.pyx":12
  * 
- * cdef inline np.float32_t max(np.float32_t a, np.float32_t b):
+ * cdef inline float32_t max(float32_t a, float32_t b):
  *     return a if a >= b else b             # <<<<<<<<<<<<<<
  * 
- * cdef inline np.float32_t min(np.float32_t a, np.float32_t b):
+ * cdef inline float32_t min(float32_t a, float32_t b):
  */
   if (((__pyx_v_a >= __pyx_v_b) != 0)) {
     __pyx_t_1 = __pyx_v_a;
@@ -1441,7 +1441,7 @@ static CYTHON_INLINE __pyx_t_5numpy_float32_t __pyx_f_3nms_max(__pyx_t_5numpy_fl
   /* "nms.pyx":11
  * cimport numpy as np
  * 
- * cdef inline np.float32_t max(np.float32_t a, np.float32_t b):             # <<<<<<<<<<<<<<
+ * cdef inline float32_t max(float32_t a, float32_t b):             # <<<<<<<<<<<<<<
  *     return a if a >= b else b
  * 
  */
@@ -1455,7 +1455,7 @@ static CYTHON_INLINE __pyx_t_5numpy_float32_t __pyx_f_3nms_max(__pyx_t_5numpy_fl
 /* "nms.pyx":14
  *     return a if a >= b else b
  * 
- * cdef inline np.float32_t min(np.float32_t a, np.float32_t b):             # <<<<<<<<<<<<<<
+ * cdef inline float32_t min(float32_t a, float32_t b):             # <<<<<<<<<<<<<<
  *     return a if a <= b else b
  * 
  */
@@ -1468,10 +1468,10 @@ static CYTHON_INLINE __pyx_t_5numpy_float32_t __pyx_f_3nms_min(__pyx_t_5numpy_fl
 
   /* "nms.pyx":15
  * 
- * cdef inline np.float32_t min(np.float32_t a, np.float32_t b):
+ * cdef inline float32_t min(float32_t a, float32_t b):
  *     return a if a <= b else b             # <<<<<<<<<<<<<<
  * 
- * def nms(np.ndarray[np.float32_t, ndim=2] dets, np.float thresh):
+ * def nms(np.ndarray[float32_t, ndim=2] dets, float thresh):
  */
   if (((__pyx_v_a <= __pyx_v_b) != 0)) {
     __pyx_t_1 = __pyx_v_a;
@@ -1484,7 +1484,7 @@ static CYTHON_INLINE __pyx_t_5numpy_float32_t __pyx_f_3nms_min(__pyx_t_5numpy_fl
   /* "nms.pyx":14
  *     return a if a >= b else b
  * 
- * cdef inline np.float32_t min(np.float32_t a, np.float32_t b):             # <<<<<<<<<<<<<<
+ * cdef inline float32_t min(float32_t a, float32_t b):             # <<<<<<<<<<<<<<
  *     return a if a <= b else b
  * 
  */
@@ -1498,9 +1498,9 @@ static CYTHON_INLINE __pyx_t_5numpy_float32_t __pyx_f_3nms_min(__pyx_t_5numpy_fl
 /* "nms.pyx":17
  *     return a if a <= b else b
  * 
- * def nms(np.ndarray[np.float32_t, ndim=2] dets, np.float thresh):             # <<<<<<<<<<<<<<
- *     cdef np.ndarray[np.float32_t, ndim=1] x1 = dets[:, 0]
- *     cdef np.ndarray[np.float32_t, ndim=1] y1 = dets[:, 1]
+ * def nms(np.ndarray[float32_t, ndim=2] dets, float thresh):             # <<<<<<<<<<<<<<
+ *     cdef np.ndarray[float32_t, ndim=1] x1 = dets[:, 0]
+ *     cdef np.ndarray[float32_t, ndim=1] y1 = dets[:, 1]
  */
 
 /* Python wrapper */
@@ -1697,10 +1697,10 @@ static PyObject *__pyx_pf_3nms_nms(CYTHON_UNUSED PyObject *__pyx_self, PyArrayOb
 
   /* "nms.pyx":18
  * 
- * def nms(np.ndarray[np.float32_t, ndim=2] dets, np.float thresh):
- *     cdef np.ndarray[np.float32_t, ndim=1] x1 = dets[:, 0]             # <<<<<<<<<<<<<<
- *     cdef np.ndarray[np.float32_t, ndim=1] y1 = dets[:, 1]
- *     cdef np.ndarray[np.float32_t, ndim=1] x2 = dets[:, 2]
+ * def nms(np.ndarray[float32_t, ndim=2] dets, float thresh):
+ *     cdef np.ndarray[float32_t, ndim=1] x1 = dets[:, 0]             # <<<<<<<<<<<<<<
+ *     cdef np.ndarray[float32_t, ndim=1] y1 = dets[:, 1]
+ *     cdef np.ndarray[float32_t, ndim=1] x2 = dets[:, 2]
  */
   __pyx_t_1 = PyObject_GetItem(((PyObject *)__pyx_v_dets), __pyx_tuple__2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 18, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
@@ -1719,11 +1719,11 @@ static PyObject *__pyx_pf_3nms_nms(CYTHON_UNUSED PyObject *__pyx_self, PyArrayOb
   __pyx_t_1 = 0;
 
   /* "nms.pyx":19
- * def nms(np.ndarray[np.float32_t, ndim=2] dets, np.float thresh):
- *     cdef np.ndarray[np.float32_t, ndim=1] x1 = dets[:, 0]
- *     cdef np.ndarray[np.float32_t, ndim=1] y1 = dets[:, 1]             # <<<<<<<<<<<<<<
- *     cdef np.ndarray[np.float32_t, ndim=1] x2 = dets[:, 2]
- *     cdef np.ndarray[np.float32_t, ndim=1] y2 = dets[:, 3]
+ * def nms(np.ndarray[float32_t, ndim=2] dets, float thresh):
+ *     cdef np.ndarray[float32_t, ndim=1] x1 = dets[:, 0]
+ *     cdef np.ndarray[float32_t, ndim=1] y1 = dets[:, 1]             # <<<<<<<<<<<<<<
+ *     cdef np.ndarray[float32_t, ndim=1] x2 = dets[:, 2]
+ *     cdef np.ndarray[float32_t, ndim=1] y2 = dets[:, 3]
  */
   __pyx_t_1 = PyObject_GetItem(((PyObject *)__pyx_v_dets), __pyx_tuple__4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 19, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
@@ -1742,11 +1742,11 @@ static PyObject *__pyx_pf_3nms_nms(CYTHON_UNUSED PyObject *__pyx_self, PyArrayOb
   __pyx_t_1 = 0;
 
   /* "nms.pyx":20
- *     cdef np.ndarray[np.float32_t, ndim=1] x1 = dets[:, 0]
- *     cdef np.ndarray[np.float32_t, ndim=1] y1 = dets[:, 1]
- *     cdef np.ndarray[np.float32_t, ndim=1] x2 = dets[:, 2]             # <<<<<<<<<<<<<<
- *     cdef np.ndarray[np.float32_t, ndim=1] y2 = dets[:, 3]
- *     cdef np.ndarray[np.float32_t, ndim=1] scores = dets[:, 4]
+ *     cdef np.ndarray[float32_t, ndim=1] x1 = dets[:, 0]
+ *     cdef np.ndarray[float32_t, ndim=1] y1 = dets[:, 1]
+ *     cdef np.ndarray[float32_t, ndim=1] x2 = dets[:, 2]             # <<<<<<<<<<<<<<
+ *     cdef np.ndarray[float32_t, ndim=1] y2 = dets[:, 3]
+ *     cdef np.ndarray[float32_t, ndim=1] scores = dets[:, 4]
  */
   __pyx_t_1 = PyObject_GetItem(((PyObject *)__pyx_v_dets), __pyx_tuple__6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 20, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
@@ -1765,10 +1765,10 @@ static PyObject *__pyx_pf_3nms_nms(CYTHON_UNUSED PyObject *__pyx_self, PyArrayOb
   __pyx_t_1 = 0;
 
   /* "nms.pyx":21
- *     cdef np.ndarray[np.float32_t, ndim=1] y1 = dets[:, 1]
- *     cdef np.ndarray[np.float32_t, ndim=1] x2 = dets[:, 2]
- *     cdef np.ndarray[np.float32_t, ndim=1] y2 = dets[:, 3]             # <<<<<<<<<<<<<<
- *     cdef np.ndarray[np.float32_t, ndim=1] scores = dets[:, 4]
+ *     cdef np.ndarray[float32_t, ndim=1] y1 = dets[:, 1]
+ *     cdef np.ndarray[float32_t, ndim=1] x2 = dets[:, 2]
+ *     cdef np.ndarray[float32_t, ndim=1] y2 = dets[:, 3]             # <<<<<<<<<<<<<<
+ *     cdef np.ndarray[float32_t, ndim=1] scores = dets[:, 4]
  * 
  */
   __pyx_t_1 = PyObject_GetItem(((PyObject *)__pyx_v_dets), __pyx_tuple__8); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 21, __pyx_L1_error)
@@ -1788,11 +1788,11 @@ static PyObject *__pyx_pf_3nms_nms(CYTHON_UNUSED PyObject *__pyx_self, PyArrayOb
   __pyx_t_1 = 0;
 
   /* "nms.pyx":22
- *     cdef np.ndarray[np.float32_t, ndim=1] x2 = dets[:, 2]
- *     cdef np.ndarray[np.float32_t, ndim=1] y2 = dets[:, 3]
- *     cdef np.ndarray[np.float32_t, ndim=1] scores = dets[:, 4]             # <<<<<<<<<<<<<<
+ *     cdef np.ndarray[float32_t, ndim=1] x2 = dets[:, 2]
+ *     cdef np.ndarray[float32_t, ndim=1] y2 = dets[:, 3]
+ *     cdef np.ndarray[float32_t, ndim=1] scores = dets[:, 4]             # <<<<<<<<<<<<<<
  * 
- *     cdef np.ndarray[np.float32_t, ndim=1] areas = (x2 - x1 + 1) * (y2 - y1 + 1)
+ *     cdef np.ndarray[float32_t, ndim=1] areas = (x2 - x1 + 1) * (y2 - y1 + 1)
  */
   __pyx_t_1 = PyObject_GetItem(((PyObject *)__pyx_v_dets), __pyx_tuple__10); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
@@ -1811,9 +1811,9 @@ static PyObject *__pyx_pf_3nms_nms(CYTHON_UNUSED PyObject *__pyx_self, PyArrayOb
   __pyx_t_1 = 0;
 
   /* "nms.pyx":24
- *     cdef np.ndarray[np.float32_t, ndim=1] scores = dets[:, 4]
+ *     cdef np.ndarray[float32_t, ndim=1] scores = dets[:, 4]
  * 
- *     cdef np.ndarray[np.float32_t, ndim=1] areas = (x2 - x1 + 1) * (y2 - y1 + 1)             # <<<<<<<<<<<<<<
+ *     cdef np.ndarray[float32_t, ndim=1] areas = (x2 - x1 + 1) * (y2 - y1 + 1)             # <<<<<<<<<<<<<<
  *     cdef np.ndarray[np.int_t, ndim=1] order = scores.argsort()[::-1]
  * 
  */
@@ -1847,7 +1847,7 @@ static PyObject *__pyx_pf_3nms_nms(CYTHON_UNUSED PyObject *__pyx_self, PyArrayOb
 
   /* "nms.pyx":25
  * 
- *     cdef np.ndarray[np.float32_t, ndim=1] areas = (x2 - x1 + 1) * (y2 - y1 + 1)
+ *     cdef np.ndarray[float32_t, ndim=1] areas = (x2 - x1 + 1) * (y2 - y1 + 1)
  *     cdef np.ndarray[np.int_t, ndim=1] order = scores.argsort()[::-1]             # <<<<<<<<<<<<<<
  * 
  *     cdef int ndets = dets.shape[0]
@@ -1946,7 +1946,7 @@ static PyObject *__pyx_pf_3nms_nms(CYTHON_UNUSED PyObject *__pyx_self, PyArrayOb
   __pyx_t_12 = 0;
 
   /* "nms.pyx":42
- *     cdef np.float32_t inter, ovr
+ *     cdef float32_t inter, ovr
  * 
  *     keep = []             # <<<<<<<<<<<<<<
  *     for _i in range(ndets):
@@ -2379,7 +2379,7 @@ static PyObject *__pyx_pf_3nms_nms(CYTHON_UNUSED PyObject *__pyx_self, PyArrayOb
  * 
  *     return keep             # <<<<<<<<<<<<<<
  * 
- * def nms_new(np.ndarray[np.float32_t, ndim=2] dets, np.float thresh):
+ * def nms_new(np.ndarray[float32_t, ndim=2] dets, float thresh):
  */
   __Pyx_XDECREF(__pyx_r);
   __Pyx_INCREF(__pyx_v_keep);
@@ -2389,9 +2389,9 @@ static PyObject *__pyx_pf_3nms_nms(CYTHON_UNUSED PyObject *__pyx_self, PyArrayOb
   /* "nms.pyx":17
  *     return a if a <= b else b
  * 
- * def nms(np.ndarray[np.float32_t, ndim=2] dets, np.float thresh):             # <<<<<<<<<<<<<<
- *     cdef np.ndarray[np.float32_t, ndim=1] x1 = dets[:, 0]
- *     cdef np.ndarray[np.float32_t, ndim=1] y1 = dets[:, 1]
+ * def nms(np.ndarray[float32_t, ndim=2] dets, float thresh):             # <<<<<<<<<<<<<<
+ *     cdef np.ndarray[float32_t, ndim=1] x1 = dets[:, 0]
+ *     cdef np.ndarray[float32_t, ndim=1] y1 = dets[:, 1]
  */
 
   /* function exit code */
@@ -2446,9 +2446,9 @@ static PyObject *__pyx_pf_3nms_nms(CYTHON_UNUSED PyObject *__pyx_self, PyArrayOb
 /* "nms.pyx":70
  *     return keep
  * 
- * def nms_new(np.ndarray[np.float32_t, ndim=2] dets, np.float thresh):             # <<<<<<<<<<<<<<
- *     cdef np.ndarray[np.float32_t, ndim=1] x1 = dets[:, 0]
- *     cdef np.ndarray[np.float32_t, ndim=1] y1 = dets[:, 1]
+ * def nms_new(np.ndarray[float32_t, ndim=2] dets, float thresh):             # <<<<<<<<<<<<<<
+ *     cdef np.ndarray[float32_t, ndim=1] x1 = dets[:, 0]
+ *     cdef np.ndarray[float32_t, ndim=1] y1 = dets[:, 1]
  */
 
 /* Python wrapper */
@@ -2649,10 +2649,10 @@ static PyObject *__pyx_pf_3nms_2nms_new(CYTHON_UNUSED PyObject *__pyx_self, PyAr
 
   /* "nms.pyx":71
  * 
- * def nms_new(np.ndarray[np.float32_t, ndim=2] dets, np.float thresh):
- *     cdef np.ndarray[np.float32_t, ndim=1] x1 = dets[:, 0]             # <<<<<<<<<<<<<<
- *     cdef np.ndarray[np.float32_t, ndim=1] y1 = dets[:, 1]
- *     cdef np.ndarray[np.float32_t, ndim=1] x2 = dets[:, 2]
+ * def nms_new(np.ndarray[float32_t, ndim=2] dets, float thresh):
+ *     cdef np.ndarray[float32_t, ndim=1] x1 = dets[:, 0]             # <<<<<<<<<<<<<<
+ *     cdef np.ndarray[float32_t, ndim=1] y1 = dets[:, 1]
+ *     cdef np.ndarray[float32_t, ndim=1] x2 = dets[:, 2]
  */
   __pyx_t_1 = PyObject_GetItem(((PyObject *)__pyx_v_dets), __pyx_tuple__13); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 71, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
@@ -2671,11 +2671,11 @@ static PyObject *__pyx_pf_3nms_2nms_new(CYTHON_UNUSED PyObject *__pyx_self, PyAr
   __pyx_t_1 = 0;
 
   /* "nms.pyx":72
- * def nms_new(np.ndarray[np.float32_t, ndim=2] dets, np.float thresh):
- *     cdef np.ndarray[np.float32_t, ndim=1] x1 = dets[:, 0]
- *     cdef np.ndarray[np.float32_t, ndim=1] y1 = dets[:, 1]             # <<<<<<<<<<<<<<
- *     cdef np.ndarray[np.float32_t, ndim=1] x2 = dets[:, 2]
- *     cdef np.ndarray[np.float32_t, ndim=1] y2 = dets[:, 3]
+ * def nms_new(np.ndarray[float32_t, ndim=2] dets, float thresh):
+ *     cdef np.ndarray[float32_t, ndim=1] x1 = dets[:, 0]
+ *     cdef np.ndarray[float32_t, ndim=1] y1 = dets[:, 1]             # <<<<<<<<<<<<<<
+ *     cdef np.ndarray[float32_t, ndim=1] x2 = dets[:, 2]
+ *     cdef np.ndarray[float32_t, ndim=1] y2 = dets[:, 3]
  */
   __pyx_t_1 = PyObject_GetItem(((PyObject *)__pyx_v_dets), __pyx_tuple__15); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 72, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
@@ -2694,11 +2694,11 @@ static PyObject *__pyx_pf_3nms_2nms_new(CYTHON_UNUSED PyObject *__pyx_self, PyAr
   __pyx_t_1 = 0;
 
   /* "nms.pyx":73
- *     cdef np.ndarray[np.float32_t, ndim=1] x1 = dets[:, 0]
- *     cdef np.ndarray[np.float32_t, ndim=1] y1 = dets[:, 1]
- *     cdef np.ndarray[np.float32_t, ndim=1] x2 = dets[:, 2]             # <<<<<<<<<<<<<<
- *     cdef np.ndarray[np.float32_t, ndim=1] y2 = dets[:, 3]
- *     cdef np.ndarray[np.float32_t, ndim=1] scores = dets[:, 4]
+ *     cdef np.ndarray[float32_t, ndim=1] x1 = dets[:, 0]
+ *     cdef np.ndarray[float32_t, ndim=1] y1 = dets[:, 1]
+ *     cdef np.ndarray[float32_t, ndim=1] x2 = dets[:, 2]             # <<<<<<<<<<<<<<
+ *     cdef np.ndarray[float32_t, ndim=1] y2 = dets[:, 3]
+ *     cdef np.ndarray[float32_t, ndim=1] scores = dets[:, 4]
  */
   __pyx_t_1 = PyObject_GetItem(((PyObject *)__pyx_v_dets), __pyx_tuple__17); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 73, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
@@ -2717,10 +2717,10 @@ static PyObject *__pyx_pf_3nms_2nms_new(CYTHON_UNUSED PyObject *__pyx_self, PyAr
   __pyx_t_1 = 0;
 
   /* "nms.pyx":74
- *     cdef np.ndarray[np.float32_t, ndim=1] y1 = dets[:, 1]
- *     cdef np.ndarray[np.float32_t, ndim=1] x2 = dets[:, 2]
- *     cdef np.ndarray[np.float32_t, ndim=1] y2 = dets[:, 3]             # <<<<<<<<<<<<<<
- *     cdef np.ndarray[np.float32_t, ndim=1] scores = dets[:, 4]
+ *     cdef np.ndarray[float32_t, ndim=1] y1 = dets[:, 1]
+ *     cdef np.ndarray[float32_t, ndim=1] x2 = dets[:, 2]
+ *     cdef np.ndarray[float32_t, ndim=1] y2 = dets[:, 3]             # <<<<<<<<<<<<<<
+ *     cdef np.ndarray[float32_t, ndim=1] scores = dets[:, 4]
  * 
  */
   __pyx_t_1 = PyObject_GetItem(((PyObject *)__pyx_v_dets), __pyx_tuple__19); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 74, __pyx_L1_error)
@@ -2740,11 +2740,11 @@ static PyObject *__pyx_pf_3nms_2nms_new(CYTHON_UNUSED PyObject *__pyx_self, PyAr
   __pyx_t_1 = 0;
 
   /* "nms.pyx":75
- *     cdef np.ndarray[np.float32_t, ndim=1] x2 = dets[:, 2]
- *     cdef np.ndarray[np.float32_t, ndim=1] y2 = dets[:, 3]
- *     cdef np.ndarray[np.float32_t, ndim=1] scores = dets[:, 4]             # <<<<<<<<<<<<<<
+ *     cdef np.ndarray[float32_t, ndim=1] x2 = dets[:, 2]
+ *     cdef np.ndarray[float32_t, ndim=1] y2 = dets[:, 3]
+ *     cdef np.ndarray[float32_t, ndim=1] scores = dets[:, 4]             # <<<<<<<<<<<<<<
  * 
- *     cdef np.ndarray[np.float32_t, ndim=1] areas = (x2 - x1 + 1) * (y2 - y1 + 1)
+ *     cdef np.ndarray[float32_t, ndim=1] areas = (x2 - x1 + 1) * (y2 - y1 + 1)
  */
   __pyx_t_1 = PyObject_GetItem(((PyObject *)__pyx_v_dets), __pyx_tuple__21); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 75, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
@@ -2763,9 +2763,9 @@ static PyObject *__pyx_pf_3nms_2nms_new(CYTHON_UNUSED PyObject *__pyx_self, PyAr
   __pyx_t_1 = 0;
 
   /* "nms.pyx":77
- *     cdef np.ndarray[np.float32_t, ndim=1] scores = dets[:, 4]
+ *     cdef np.ndarray[float32_t, ndim=1] scores = dets[:, 4]
  * 
- *     cdef np.ndarray[np.float32_t, ndim=1] areas = (x2 - x1 + 1) * (y2 - y1 + 1)             # <<<<<<<<<<<<<<
+ *     cdef np.ndarray[float32_t, ndim=1] areas = (x2 - x1 + 1) * (y2 - y1 + 1)             # <<<<<<<<<<<<<<
  *     cdef np.ndarray[np.int_t, ndim=1] order = scores.argsort()[::-1]
  * 
  */
@@ -2799,7 +2799,7 @@ static PyObject *__pyx_pf_3nms_2nms_new(CYTHON_UNUSED PyObject *__pyx_self, PyAr
 
   /* "nms.pyx":78
  * 
- *     cdef np.ndarray[np.float32_t, ndim=1] areas = (x2 - x1 + 1) * (y2 - y1 + 1)
+ *     cdef np.ndarray[float32_t, ndim=1] areas = (x2 - x1 + 1) * (y2 - y1 + 1)
  *     cdef np.ndarray[np.int_t, ndim=1] order = scores.argsort()[::-1]             # <<<<<<<<<<<<<<
  * 
  *     cdef int ndets = dets.shape[0]
@@ -2898,7 +2898,7 @@ static PyObject *__pyx_pf_3nms_2nms_new(CYTHON_UNUSED PyObject *__pyx_self, PyAr
   __pyx_t_12 = 0;
 
   /* "nms.pyx":95
- *     cdef np.float32_t inter, ovr
+ *     cdef float32_t inter, ovr
  * 
  *     keep = []             # <<<<<<<<<<<<<<
  *     for _i in range(ndets):
@@ -3400,9 +3400,9 @@ static PyObject *__pyx_pf_3nms_2nms_new(CYTHON_UNUSED PyObject *__pyx_self, PyAr
   /* "nms.pyx":70
  *     return keep
  * 
- * def nms_new(np.ndarray[np.float32_t, ndim=2] dets, np.float thresh):             # <<<<<<<<<<<<<<
- *     cdef np.ndarray[np.float32_t, ndim=1] x1 = dets[:, 0]
- *     cdef np.ndarray[np.float32_t, ndim=1] y1 = dets[:, 1]
+ * def nms_new(np.ndarray[float32_t, ndim=2] dets, float thresh):             # <<<<<<<<<<<<<<
+ *     cdef np.ndarray[float32_t, ndim=1] x1 = dets[:, 0]
+ *     cdef np.ndarray[float32_t, ndim=1] y1 = dets[:, 1]
  */
 
   /* function exit code */
@@ -5670,10 +5670,10 @@ static int __Pyx_InitCachedConstants(void) {
 
   /* "nms.pyx":18
  * 
- * def nms(np.ndarray[np.float32_t, ndim=2] dets, np.float thresh):
- *     cdef np.ndarray[np.float32_t, ndim=1] x1 = dets[:, 0]             # <<<<<<<<<<<<<<
- *     cdef np.ndarray[np.float32_t, ndim=1] y1 = dets[:, 1]
- *     cdef np.ndarray[np.float32_t, ndim=1] x2 = dets[:, 2]
+ * def nms(np.ndarray[float32_t, ndim=2] dets, float thresh):
+ *     cdef np.ndarray[float32_t, ndim=1] x1 = dets[:, 0]             # <<<<<<<<<<<<<<
+ *     cdef np.ndarray[float32_t, ndim=1] y1 = dets[:, 1]
+ *     cdef np.ndarray[float32_t, ndim=1] x2 = dets[:, 2]
  */
   __pyx_slice_ = PySlice_New(Py_None, Py_None, Py_None); if (unlikely(!__pyx_slice_)) __PYX_ERR(0, 18, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_slice_);
@@ -5683,11 +5683,11 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__2);
 
   /* "nms.pyx":19
- * def nms(np.ndarray[np.float32_t, ndim=2] dets, np.float thresh):
- *     cdef np.ndarray[np.float32_t, ndim=1] x1 = dets[:, 0]
- *     cdef np.ndarray[np.float32_t, ndim=1] y1 = dets[:, 1]             # <<<<<<<<<<<<<<
- *     cdef np.ndarray[np.float32_t, ndim=1] x2 = dets[:, 2]
- *     cdef np.ndarray[np.float32_t, ndim=1] y2 = dets[:, 3]
+ * def nms(np.ndarray[float32_t, ndim=2] dets, float thresh):
+ *     cdef np.ndarray[float32_t, ndim=1] x1 = dets[:, 0]
+ *     cdef np.ndarray[float32_t, ndim=1] y1 = dets[:, 1]             # <<<<<<<<<<<<<<
+ *     cdef np.ndarray[float32_t, ndim=1] x2 = dets[:, 2]
+ *     cdef np.ndarray[float32_t, ndim=1] y2 = dets[:, 3]
  */
   __pyx_slice__3 = PySlice_New(Py_None, Py_None, Py_None); if (unlikely(!__pyx_slice__3)) __PYX_ERR(0, 19, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_slice__3);
@@ -5697,11 +5697,11 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__4);
 
   /* "nms.pyx":20
- *     cdef np.ndarray[np.float32_t, ndim=1] x1 = dets[:, 0]
- *     cdef np.ndarray[np.float32_t, ndim=1] y1 = dets[:, 1]
- *     cdef np.ndarray[np.float32_t, ndim=1] x2 = dets[:, 2]             # <<<<<<<<<<<<<<
- *     cdef np.ndarray[np.float32_t, ndim=1] y2 = dets[:, 3]
- *     cdef np.ndarray[np.float32_t, ndim=1] scores = dets[:, 4]
+ *     cdef np.ndarray[float32_t, ndim=1] x1 = dets[:, 0]
+ *     cdef np.ndarray[float32_t, ndim=1] y1 = dets[:, 1]
+ *     cdef np.ndarray[float32_t, ndim=1] x2 = dets[:, 2]             # <<<<<<<<<<<<<<
+ *     cdef np.ndarray[float32_t, ndim=1] y2 = dets[:, 3]
+ *     cdef np.ndarray[float32_t, ndim=1] scores = dets[:, 4]
  */
   __pyx_slice__5 = PySlice_New(Py_None, Py_None, Py_None); if (unlikely(!__pyx_slice__5)) __PYX_ERR(0, 20, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_slice__5);
@@ -5711,10 +5711,10 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__6);
 
   /* "nms.pyx":21
- *     cdef np.ndarray[np.float32_t, ndim=1] y1 = dets[:, 1]
- *     cdef np.ndarray[np.float32_t, ndim=1] x2 = dets[:, 2]
- *     cdef np.ndarray[np.float32_t, ndim=1] y2 = dets[:, 3]             # <<<<<<<<<<<<<<
- *     cdef np.ndarray[np.float32_t, ndim=1] scores = dets[:, 4]
+ *     cdef np.ndarray[float32_t, ndim=1] y1 = dets[:, 1]
+ *     cdef np.ndarray[float32_t, ndim=1] x2 = dets[:, 2]
+ *     cdef np.ndarray[float32_t, ndim=1] y2 = dets[:, 3]             # <<<<<<<<<<<<<<
+ *     cdef np.ndarray[float32_t, ndim=1] scores = dets[:, 4]
  * 
  */
   __pyx_slice__7 = PySlice_New(Py_None, Py_None, Py_None); if (unlikely(!__pyx_slice__7)) __PYX_ERR(0, 21, __pyx_L1_error)
@@ -5725,11 +5725,11 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__8);
 
   /* "nms.pyx":22
- *     cdef np.ndarray[np.float32_t, ndim=1] x2 = dets[:, 2]
- *     cdef np.ndarray[np.float32_t, ndim=1] y2 = dets[:, 3]
- *     cdef np.ndarray[np.float32_t, ndim=1] scores = dets[:, 4]             # <<<<<<<<<<<<<<
+ *     cdef np.ndarray[float32_t, ndim=1] x2 = dets[:, 2]
+ *     cdef np.ndarray[float32_t, ndim=1] y2 = dets[:, 3]
+ *     cdef np.ndarray[float32_t, ndim=1] scores = dets[:, 4]             # <<<<<<<<<<<<<<
  * 
- *     cdef np.ndarray[np.float32_t, ndim=1] areas = (x2 - x1 + 1) * (y2 - y1 + 1)
+ *     cdef np.ndarray[float32_t, ndim=1] areas = (x2 - x1 + 1) * (y2 - y1 + 1)
  */
   __pyx_slice__9 = PySlice_New(Py_None, Py_None, Py_None); if (unlikely(!__pyx_slice__9)) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_slice__9);
@@ -5740,7 +5740,7 @@ static int __Pyx_InitCachedConstants(void) {
 
   /* "nms.pyx":25
  * 
- *     cdef np.ndarray[np.float32_t, ndim=1] areas = (x2 - x1 + 1) * (y2 - y1 + 1)
+ *     cdef np.ndarray[float32_t, ndim=1] areas = (x2 - x1 + 1) * (y2 - y1 + 1)
  *     cdef np.ndarray[np.int_t, ndim=1] order = scores.argsort()[::-1]             # <<<<<<<<<<<<<<
  * 
  *     cdef int ndets = dets.shape[0]
@@ -5751,10 +5751,10 @@ static int __Pyx_InitCachedConstants(void) {
 
   /* "nms.pyx":71
  * 
- * def nms_new(np.ndarray[np.float32_t, ndim=2] dets, np.float thresh):
- *     cdef np.ndarray[np.float32_t, ndim=1] x1 = dets[:, 0]             # <<<<<<<<<<<<<<
- *     cdef np.ndarray[np.float32_t, ndim=1] y1 = dets[:, 1]
- *     cdef np.ndarray[np.float32_t, ndim=1] x2 = dets[:, 2]
+ * def nms_new(np.ndarray[float32_t, ndim=2] dets, float thresh):
+ *     cdef np.ndarray[float32_t, ndim=1] x1 = dets[:, 0]             # <<<<<<<<<<<<<<
+ *     cdef np.ndarray[float32_t, ndim=1] y1 = dets[:, 1]
+ *     cdef np.ndarray[float32_t, ndim=1] x2 = dets[:, 2]
  */
   __pyx_slice__12 = PySlice_New(Py_None, Py_None, Py_None); if (unlikely(!__pyx_slice__12)) __PYX_ERR(0, 71, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_slice__12);
@@ -5764,11 +5764,11 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__13);
 
   /* "nms.pyx":72
- * def nms_new(np.ndarray[np.float32_t, ndim=2] dets, np.float thresh):
- *     cdef np.ndarray[np.float32_t, ndim=1] x1 = dets[:, 0]
- *     cdef np.ndarray[np.float32_t, ndim=1] y1 = dets[:, 1]             # <<<<<<<<<<<<<<
- *     cdef np.ndarray[np.float32_t, ndim=1] x2 = dets[:, 2]
- *     cdef np.ndarray[np.float32_t, ndim=1] y2 = dets[:, 3]
+ * def nms_new(np.ndarray[float32_t, ndim=2] dets, float thresh):
+ *     cdef np.ndarray[float32_t, ndim=1] x1 = dets[:, 0]
+ *     cdef np.ndarray[float32_t, ndim=1] y1 = dets[:, 1]             # <<<<<<<<<<<<<<
+ *     cdef np.ndarray[float32_t, ndim=1] x2 = dets[:, 2]
+ *     cdef np.ndarray[float32_t, ndim=1] y2 = dets[:, 3]
  */
   __pyx_slice__14 = PySlice_New(Py_None, Py_None, Py_None); if (unlikely(!__pyx_slice__14)) __PYX_ERR(0, 72, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_slice__14);
@@ -5778,11 +5778,11 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__15);
 
   /* "nms.pyx":73
- *     cdef np.ndarray[np.float32_t, ndim=1] x1 = dets[:, 0]
- *     cdef np.ndarray[np.float32_t, ndim=1] y1 = dets[:, 1]
- *     cdef np.ndarray[np.float32_t, ndim=1] x2 = dets[:, 2]             # <<<<<<<<<<<<<<
- *     cdef np.ndarray[np.float32_t, ndim=1] y2 = dets[:, 3]
- *     cdef np.ndarray[np.float32_t, ndim=1] scores = dets[:, 4]
+ *     cdef np.ndarray[float32_t, ndim=1] x1 = dets[:, 0]
+ *     cdef np.ndarray[float32_t, ndim=1] y1 = dets[:, 1]
+ *     cdef np.ndarray[float32_t, ndim=1] x2 = dets[:, 2]             # <<<<<<<<<<<<<<
+ *     cdef np.ndarray[float32_t, ndim=1] y2 = dets[:, 3]
+ *     cdef np.ndarray[float32_t, ndim=1] scores = dets[:, 4]
  */
   __pyx_slice__16 = PySlice_New(Py_None, Py_None, Py_None); if (unlikely(!__pyx_slice__16)) __PYX_ERR(0, 73, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_slice__16);
@@ -5792,10 +5792,10 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__17);
 
   /* "nms.pyx":74
- *     cdef np.ndarray[np.float32_t, ndim=1] y1 = dets[:, 1]
- *     cdef np.ndarray[np.float32_t, ndim=1] x2 = dets[:, 2]
- *     cdef np.ndarray[np.float32_t, ndim=1] y2 = dets[:, 3]             # <<<<<<<<<<<<<<
- *     cdef np.ndarray[np.float32_t, ndim=1] scores = dets[:, 4]
+ *     cdef np.ndarray[float32_t, ndim=1] y1 = dets[:, 1]
+ *     cdef np.ndarray[float32_t, ndim=1] x2 = dets[:, 2]
+ *     cdef np.ndarray[float32_t, ndim=1] y2 = dets[:, 3]             # <<<<<<<<<<<<<<
+ *     cdef np.ndarray[float32_t, ndim=1] scores = dets[:, 4]
  * 
  */
   __pyx_slice__18 = PySlice_New(Py_None, Py_None, Py_None); if (unlikely(!__pyx_slice__18)) __PYX_ERR(0, 74, __pyx_L1_error)
@@ -5806,11 +5806,11 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__19);
 
   /* "nms.pyx":75
- *     cdef np.ndarray[np.float32_t, ndim=1] x2 = dets[:, 2]
- *     cdef np.ndarray[np.float32_t, ndim=1] y2 = dets[:, 3]
- *     cdef np.ndarray[np.float32_t, ndim=1] scores = dets[:, 4]             # <<<<<<<<<<<<<<
+ *     cdef np.ndarray[float32_t, ndim=1] x2 = dets[:, 2]
+ *     cdef np.ndarray[float32_t, ndim=1] y2 = dets[:, 3]
+ *     cdef np.ndarray[float32_t, ndim=1] scores = dets[:, 4]             # <<<<<<<<<<<<<<
  * 
- *     cdef np.ndarray[np.float32_t, ndim=1] areas = (x2 - x1 + 1) * (y2 - y1 + 1)
+ *     cdef np.ndarray[float32_t, ndim=1] areas = (x2 - x1 + 1) * (y2 - y1 + 1)
  */
   __pyx_slice__20 = PySlice_New(Py_None, Py_None, Py_None); if (unlikely(!__pyx_slice__20)) __PYX_ERR(0, 75, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_slice__20);
@@ -5821,7 +5821,7 @@ static int __Pyx_InitCachedConstants(void) {
 
   /* "nms.pyx":78
  * 
- *     cdef np.ndarray[np.float32_t, ndim=1] areas = (x2 - x1 + 1) * (y2 - y1 + 1)
+ *     cdef np.ndarray[float32_t, ndim=1] areas = (x2 - x1 + 1) * (y2 - y1 + 1)
  *     cdef np.ndarray[np.int_t, ndim=1] order = scores.argsort()[::-1]             # <<<<<<<<<<<<<<
  * 
  *     cdef int ndets = dets.shape[0]
@@ -5899,9 +5899,9 @@ static int __Pyx_InitCachedConstants(void) {
   /* "nms.pyx":17
  *     return a if a <= b else b
  * 
- * def nms(np.ndarray[np.float32_t, ndim=2] dets, np.float thresh):             # <<<<<<<<<<<<<<
- *     cdef np.ndarray[np.float32_t, ndim=1] x1 = dets[:, 0]
- *     cdef np.ndarray[np.float32_t, ndim=1] y1 = dets[:, 1]
+ * def nms(np.ndarray[float32_t, ndim=2] dets, float thresh):             # <<<<<<<<<<<<<<
+ *     cdef np.ndarray[float32_t, ndim=1] x1 = dets[:, 0]
+ *     cdef np.ndarray[float32_t, ndim=1] y1 = dets[:, 1]
  */
   __pyx_tuple__29 = PyTuple_Pack(29, __pyx_n_s_dets, __pyx_n_s_thresh, __pyx_n_s_x1, __pyx_n_s_y1, __pyx_n_s_x2, __pyx_n_s_y2, __pyx_n_s_scores, __pyx_n_s_areas, __pyx_n_s_order, __pyx_n_s_ndets, __pyx_n_s_suppressed, __pyx_n_s_i, __pyx_n_s_j, __pyx_n_s_i_2, __pyx_n_s_j_2, __pyx_n_s_ix1, __pyx_n_s_iy1, __pyx_n_s_ix2, __pyx_n_s_iy2, __pyx_n_s_iarea, __pyx_n_s_xx1, __pyx_n_s_yy1, __pyx_n_s_xx2, __pyx_n_s_yy2, __pyx_n_s_w, __pyx_n_s_h, __pyx_n_s_inter, __pyx_n_s_ovr, __pyx_n_s_keep); if (unlikely(!__pyx_tuple__29)) __PYX_ERR(0, 17, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__29);
@@ -5911,9 +5911,9 @@ static int __Pyx_InitCachedConstants(void) {
   /* "nms.pyx":70
  *     return keep
  * 
- * def nms_new(np.ndarray[np.float32_t, ndim=2] dets, np.float thresh):             # <<<<<<<<<<<<<<
- *     cdef np.ndarray[np.float32_t, ndim=1] x1 = dets[:, 0]
- *     cdef np.ndarray[np.float32_t, ndim=1] y1 = dets[:, 1]
+ * def nms_new(np.ndarray[float32_t, ndim=2] dets, float thresh):             # <<<<<<<<<<<<<<
+ *     cdef np.ndarray[float32_t, ndim=1] x1 = dets[:, 0]
+ *     cdef np.ndarray[float32_t, ndim=1] y1 = dets[:, 1]
  */
   __pyx_tuple__31 = PyTuple_Pack(31, __pyx_n_s_dets, __pyx_n_s_thresh, __pyx_n_s_x1, __pyx_n_s_y1, __pyx_n_s_x2, __pyx_n_s_y2, __pyx_n_s_scores, __pyx_n_s_areas, __pyx_n_s_order, __pyx_n_s_ndets, __pyx_n_s_suppressed, __pyx_n_s_i, __pyx_n_s_j, __pyx_n_s_i_2, __pyx_n_s_j_2, __pyx_n_s_ix1, __pyx_n_s_iy1, __pyx_n_s_ix2, __pyx_n_s_iy2, __pyx_n_s_iarea, __pyx_n_s_xx1, __pyx_n_s_yy1, __pyx_n_s_xx2, __pyx_n_s_yy2, __pyx_n_s_w, __pyx_n_s_h, __pyx_n_s_inter, __pyx_n_s_ovr, __pyx_n_s_keep, __pyx_n_s_ovr1, __pyx_n_s_ovr2); if (unlikely(!__pyx_tuple__31)) __PYX_ERR(0, 70, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__31);
@@ -6059,9 +6059,9 @@ PyMODINIT_FUNC PyInit_nms(void)
   /* "nms.pyx":17
  *     return a if a <= b else b
  * 
- * def nms(np.ndarray[np.float32_t, ndim=2] dets, np.float thresh):             # <<<<<<<<<<<<<<
- *     cdef np.ndarray[np.float32_t, ndim=1] x1 = dets[:, 0]
- *     cdef np.ndarray[np.float32_t, ndim=1] y1 = dets[:, 1]
+ * def nms(np.ndarray[float32_t, ndim=2] dets, float thresh):             # <<<<<<<<<<<<<<
+ *     cdef np.ndarray[float32_t, ndim=1] x1 = dets[:, 0]
+ *     cdef np.ndarray[float32_t, ndim=1] y1 = dets[:, 1]
  */
   __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_3nms_1nms, NULL, __pyx_n_s_nms); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 17, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
@@ -6071,9 +6071,9 @@ PyMODINIT_FUNC PyInit_nms(void)
   /* "nms.pyx":70
  *     return keep
  * 
- * def nms_new(np.ndarray[np.float32_t, ndim=2] dets, np.float thresh):             # <<<<<<<<<<<<<<
- *     cdef np.ndarray[np.float32_t, ndim=1] x1 = dets[:, 0]
- *     cdef np.ndarray[np.float32_t, ndim=1] y1 = dets[:, 1]
+ * def nms_new(np.ndarray[float32_t, ndim=2] dets, float thresh):             # <<<<<<<<<<<<<<
+ *     cdef np.ndarray[float32_t, ndim=1] x1 = dets[:, 0]
+ *     cdef np.ndarray[float32_t, ndim=1] y1 = dets[:, 1]
  */
   __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_3nms_3nms_new, NULL, __pyx_n_s_nms); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 70, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
