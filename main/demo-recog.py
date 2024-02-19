@@ -154,4 +154,4 @@ def valid_xml_char_ordinal(c):
                     
 
 if __name__ == '__main__':
-    tf.app.run()
+    tf.keras.app.run()

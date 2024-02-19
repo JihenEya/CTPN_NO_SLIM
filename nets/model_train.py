@@ -1,7 +1,4 @@
 import tensorflow as tf
-from tensorflow.keras.applications import VGG16
-
-#from nets import vgg
 from utils.rpn_msr.anchor_target_layer import anchor_target_layer as anchor_target_layer_py
 
 
@@ -69,7 +66,7 @@ def model(image):
     
     # Ajouter votre propre couche fully connected
     x = base_model(image)
-    x = tf.keras.layers.Conv2D(512, (3, 3), activation='relu', padding='same')(x)
+    x = tf.layers.Conv2D(512, (3, 3), activation='relu', padding='same')(x)
     
     return x
 
