@@ -8,8 +8,8 @@ from tqdm import tqdm
 sys.path.append(os.getcwd())
 from utils import orderConvex, shrink_poly
 
-DATA_FOLDER = "/home/amit/text_deduction/text-detection-ctpn/main/data/test_copy"
-OUTPUT = "/home/amit/text_deduction/text-detection-ctpn/main/data/test_split_copy"
+DATA_FOLDER = "/home/amit/text_deduction/CTPN_NO_SLIM/main/data/test_copy"# change
+OUTPUT = "/home/amit/text_deduction/CTPN_NO_SLIM/main/data/test_split_copy"
 MAX_LEN = 1200
 MIN_LEN = 600
 

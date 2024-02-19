@@ -8,9 +8,9 @@ from tqdm import tqdm
 sys.path.append(os.getcwd())
 from utils import orderConvex, shrink_poly
 
-DATA_FOLDER = "/content/text-detection-ctpn/data/mlt_selected/"
-OUTPUT = "/content/text-detection-ctpn/data/mlt_splitted/"
-MAX_LEN = 1200
+DATA_FOLDER = "/content/CTPN_NO_SLIM/data/mlt_selected/"#changed
+OUTPUT = "/content/CTPN_NO_SLIM/data/mlt_splitted/"
+MAX_LEN = 1200#change
 MIN_LEN = 600
 
 im_fns = os.listdir(os.path.join(DATA_FOLDER, "image"))
