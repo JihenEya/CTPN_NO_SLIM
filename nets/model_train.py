@@ -1,7 +1,7 @@
 import tensorflow as tf
 from tensorflow.keras.applications import VGG16
 
-from nets import vgg
+#from nets import vgg
 from utils.rpn_msr.anchor_target_layer import anchor_target_layer as anchor_target_layer_py
 
 
