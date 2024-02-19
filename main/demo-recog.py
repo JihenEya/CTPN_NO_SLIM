@@ -138,7 +138,7 @@ def main(argv=None):
                     et.write(xml_path, pretty_print=True, xml_declaration=True, encoding= "utf-8")
                 except Exception as e:
                     print("Unable to write to xml")
-                    
+                  
                     
                     
 def valid_xml_char_ordinal(c):
