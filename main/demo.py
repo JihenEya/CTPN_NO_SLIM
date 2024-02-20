@@ -2,11 +2,13 @@ import datetime
 import os
 import sys
 import time
+import sys
+
 
 import tensorflow as tf
 from tensorflow.keras import optimizers
-
 from nets import model_train as model
+
 from utils.rpn_msr.proposal_layer import proposal_layer
 from utils.text_connector.detectors import TextDetector
 import argparse
